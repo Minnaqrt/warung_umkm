@@ -48,7 +48,7 @@ class _HalamanEditProdukState extends State<HalamanEditProduk> {
       isLoading = true;
     });
 
-    var uri = Uri.parse('http://192.168.145.99/warung_umkm/lib/edit_produk.php');
+    var uri = Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/edit_produk.php');
 
     var request = http.MultipartRequest('POST', uri)
       ..fields['id'] = widget.id.toString()

@@ -155,7 +155,7 @@ class _HalamanOngkirState extends State<HalamanOngkir> {
 
   Future<int> insertJual(int totalHarga, int biayaPengiriman, int totalBayar, String usernamePembeli, int jumlahProduk) async {
   final response = await http.post(
-    Uri.parse('http://192.168.145.99/warung_umkm/lib/insert_jual.php'),
+    Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/insert_jual.php'),
     body: {
       'tanggal_penjualan': DateTime.now().toString(),
       'total_harga': totalHarga.toString(),
@@ -182,7 +182,7 @@ class _HalamanOngkirState extends State<HalamanOngkir> {
 Future<void> insertDetailJual(
     int jualId, int produkId, int jumlah, int hargaProduk, int totalHarga, int beratPaket, String metodePengiriman, int biayaPengiriman, int totalBayar, String namaProduk) async {
   final response = await http.post(
-    Uri.parse('http://192.168.145.99/warung_umkm/lib/insert_detailjual.php'),
+    Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/insert_detailjual.php'),
     body: {
       'jual_id': jualId.toString(),
       'produk_id': produkId.toString(),

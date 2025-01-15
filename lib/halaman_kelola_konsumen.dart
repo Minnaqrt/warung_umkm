@@ -17,7 +17,7 @@ class _HalamanKelolaKonsumenState extends State<HalamanKelolaKonsumen> {
   }
 
   Future<void> fetchKonsumen() async {
-    final response = await http.get(Uri.parse('http://192.168.145.99/warung_umkm/lib/get_konsumen.php'));
+    final response = await http.get(Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/get_konsumen.php'));
 
     if (response.statusCode == 200) {
       List jsonResponse = json.decode(response.body);
@@ -36,7 +36,7 @@ class _HalamanKelolaKonsumenState extends State<HalamanKelolaKonsumen> {
 
   Future<void> tambahKonsumen(String username, String password) async {
     final response = await http.post(
-      Uri.parse('http://192.168.145.99/warung_umkm/lib/add_konsumen.php'),
+      Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/add_konsumen.php'),
       body: {
         'username': username,
         'password': password,
@@ -57,7 +57,7 @@ class _HalamanKelolaKonsumenState extends State<HalamanKelolaKonsumen> {
     try {
       print('Sending request to delete customer with ID: $id'); // Debugging line
       final response = await http.post(
-        Uri.parse('http://192.168.145.99/warung_umkm/lib/delete_konsumen.php'),
+        Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/delete_konsumen.php'),
         body: {'id': id.toString()},
       );
 

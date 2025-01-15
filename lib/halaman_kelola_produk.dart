@@ -22,7 +22,7 @@ class _HalamanKelolaProdukState extends State<HalamanKelolaProduk> {
 
   Future<void> fetchProduk() async {
     final response = await http
-        .get(Uri.parse('http://192.168.145.99/warung_umkm/lib/get_produk.php'));
+        .get(Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/get_produk.php'));
 
     if (response.statusCode == 200) {
       List jsonResponse = json.decode(response.body);
@@ -41,7 +41,7 @@ class _HalamanKelolaProdukState extends State<HalamanKelolaProduk> {
     try {
       print('Sending request to delete product with ID: $id'); // Debugging line
       final response = await http.post(
-        Uri.parse('http://192.168.145.99/warung_umkm/lib/delete_produk.php'),
+        Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/delete_produk.php'),
         body: {'id': id.toString()},
       );
 

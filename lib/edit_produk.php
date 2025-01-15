@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         // Update image URL
-        $image = 'http://192.168.145.99/warung_umkm/lib/images/' . $imageFileName; // Gambar baru
+        $image = 'http://warung-umkm.vercel.app/warung_umkm/lib/images/' . $imageFileName; // Gambar baru
     }
 
     // Update product in the database

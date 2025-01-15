@@ -32,7 +32,7 @@ class _HalamanTambahProdukState extends State<HalamanTambahProduk> {
     });
 
     try {
-      var uri = Uri.parse('http://192.168.145.99/warung_umkm/lib/add_produk.php');
+      var uri = Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/add_produk.php');
       String mimeType = lookupMimeType(_selectedImage!.path) ?? 'application/octet-stream';
 
       var request = http.MultipartRequest('POST', uri)

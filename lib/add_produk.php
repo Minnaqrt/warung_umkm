@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $imageFileName = $_FILES["gambar"]["name"];
-    $imageURL = 'http://192.168.145.99/warung_umkm/lib/images/' . $imageFileName;
+    $imageURL = 'http://warung-umkm.vercel.app/warung_umkm/lib/images/' . $imageFileName;
 
     // Gunakan path absolut ke folder images
     $targetDirectory = "C:/xampp/htdocs/warung_umkm/lib/images/";

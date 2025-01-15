@@ -105,7 +105,7 @@ class _HalamanRegistrasiState extends State<HalamanRegistrasi> {
 
   Future<void> registrasi() async {
     final response = await http.post(
-      Uri.parse("http://192.168.145.99/warung_umkm/lib/registrasi.php"),
+      Uri.parse("http://warung-umkm.vercel.app/warung_umkm/lib/registrasi.php"),
       body: {
         "username": usernameController.text,
         "password": passwordController.text,

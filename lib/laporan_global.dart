@@ -23,7 +23,7 @@ class _LaporanGlobalState extends State<LaporanGlobal> {
       'page': page.toString(),
       'items_per_page': itemsPerPage.toString()
     };
-    final uri = Uri.http('192.168.145.99', '/warung_umkm/lib/get_jual.php', queryParameters);
+    final uri = Uri.http('warung-umkm.vercel.app', '/warung_umkm/lib/get_jual.php', queryParameters);
     final response = await http.get(uri);
 
     if (response.statusCode == 200) {
@@ -39,7 +39,7 @@ class _LaporanGlobalState extends State<LaporanGlobal> {
 
   Future<List<Map<String, dynamic>>> fetchDataDetail(int jualId) async {
     final response = await http.get(
-        Uri.parse('http://192.168.145.99/warung_umkm/lib/get_detailjual.php?jual_id=$jualId'));
+        Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/get_detailjual.php?jual_id=$jualId'));
     if (response.statusCode == 200) {
       try {
         Map<String, dynamic> data = json.decode(response.body);

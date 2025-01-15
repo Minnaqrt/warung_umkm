@@ -63,7 +63,7 @@ class _HalamanDashboardState extends State<HalamanDashboard> {
   Future<void> fetchProducts() async {
     try {
       final response = await http.get(
-          Uri.parse('http://192.168.145.99/warung_umkm/lib/get_produk.php'));
+          Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/get_produk.php'));
       if (response.statusCode == 200) {
         List<dynamic> jsonResponse = json.decode(response.body);
         setState(() {

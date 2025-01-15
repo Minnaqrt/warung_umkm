@@ -23,7 +23,7 @@ class _HalamanLoginState extends State<HalamanLogin> {
 
   Future<void> login() async {
     final response = await http.post(
-      Uri.parse('http://192.168.145.99/warung_umkm/lib/login_konsumen.php'),
+      Uri.parse('http://warung-umkm.vercel.app/warung_umkm/lib/login_konsumen.php'),
       body: {
         'username': usernameController.text,
         'password': passwordController.text,
