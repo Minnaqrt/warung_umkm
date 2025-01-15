@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "47206699243",
+    "project_id": "warung-umkm-fb95b",
+    "storage_bucket": "warung-umkm-fb95b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47206699243:android:3dd221745769eb6d916eae",
+        "android_client_info": {
+          "package_name": "com.example.warung_umkm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq3hVOSRBcmWJ1I9vlf7cm1Zv4-RSYblg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
